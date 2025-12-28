@@ -11,7 +11,7 @@ const App: React.FC = () => {
   const [appState, setAppState] = useState<AppState>(AppState.VIEWING);
   const [hasStarted, setHasStarted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const audioFileLocation = "public/audio/Suniyan_Suniyan.mp3"
+  const audioFileLocation = "/audio/Suniyan_Suniyan.mp3"
 
   const startJourney = () => {
     setHasStarted(true);
