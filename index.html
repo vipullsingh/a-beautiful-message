@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Eternal Love Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --rose: #b76e79;
+        --blush: #fce4ec;
+        --cream: #fffdfa;
+      }
+      body {
+        margin: 0;
+        background-color: var(--blush);
+        color: #5d4037;
+        font-family: 'Quicksand', sans-serif;
+        scroll-behavior: smooth;
+      }
+      .font-handwriting { font-family: 'Great Vibes', cursive; }
+      .font-serif { font-family: 'Playfair Display', serif; }
+      
+      .scroll-container {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+      }
+      .scroll-section {
+        height: 100vh;
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 2rem;
+      }
+      
+      .paper-texture {
+        background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+      }
+
+      /* Custom scrollbar for a romantic look */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: var(--blush); }
+      ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 10px; }
+
+      .polaroid-frame {
+        background: white;
+        padding: 1rem 1rem 4rem 1rem;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        transform: rotate(var(--rotation, -1deg));
+        transition: transform 0.5s ease;
+      }
+      .polaroid-frame:hover {
+        transform: rotate(0deg) scale(1.02);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
