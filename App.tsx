@@ -11,6 +11,7 @@ const App: React.FC = () => {
   const [appState, setAppState] = useState<AppState>(AppState.VIEWING);
   const [hasStarted, setHasStarted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioFileLocation = "public\audio\Suniyan_Suniyan.mp3"
 
   const startJourney = () => {
     setHasStarted(true);
@@ -44,7 +45,7 @@ const App: React.FC = () => {
 
         <audio 
           ref={audioRef}
-          src="public\audio\Main Tumhara - Dil Bechara  Easy Piano Cover  A.R. Rahman  Sushant Singh Rajput  Nikhil Sharma.mp3"
+          src={audioFileLocation}
           loop
         />
       </div>
@@ -57,7 +58,7 @@ const App: React.FC = () => {
       
       <audio 
         ref={audioRef}
-        src="public\audio\Main Tumhara - Dil Bechara  Easy Piano Cover  A.R. Rahman  Sushant Singh Rajput  Nikhil Sharma.mp3"
+        src={audioFileLocation}
         autoPlay
         loop
       />
